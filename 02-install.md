@@ -37,7 +37,11 @@ import sklearn
 
 Did you install Python 2 or 3? Why? How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
-REPLACE THIS TEXT WITH YOUR RESPONSE
+I picked Python 2 because 1. It's pre-loaded on Macs and 2. Python 3 lacks some back-compatibility as I recall (although it does have packages like BeautifulSoup that aren't built for 2)
+
+Python 2.7.9 :: Anaconda 2.2.0 (x86_64)
+
+The command "python -V" gives you the Python version you're running.
 
 ---
 
