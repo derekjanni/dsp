@@ -1,7 +1,6 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
-
 def donuts(count):
     """
     Given an int count of a number of donuts, return a string of the
@@ -18,8 +17,8 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    if(count > 10):print("Number of donuts: many")
-    else:print("Number of donuts: " + str(count))
+    if(count >= 10):return("Number of donuts: many")
+    else:return("Number of donuts: " + str(count))
 
 def both_ends(s):
     """
@@ -114,10 +113,11 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    if all(["bad" in s, "not" in s, s.index("not") < s.index("bad")]):
-        sub = s[s.index("not"):s.index("bad")+3]
-        s.replace(sub, "good")
-    print(s)
+    out = s
+    if ("bad" in s) & ("not" in s):
+        if (s.index("not") < s.index("bad")):
+           out = s.replace(s[s.index("not"):s.index("bad")+3], "good")
+    return out
     
 def front_back(a, b):
     """
@@ -143,4 +143,4 @@ def front_back(a, b):
         fb, sb = b[:len(b)/2 +1], b[len(b)/2 + 1:]
     else:
         fb, sb = b[:len(b)/2], b[len(b)/2:]
-    print(fa + fb + sa + sb)
+    return(fa + fb + sa + sb)
