@@ -15,8 +15,9 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
-
+    words = [x for x in words if len(x) >= 2]
+    words = [x for x in words if x[0] == x[len(x)-1]]
+    return len(words)
 
 def front_x(words):
     """
@@ -85,4 +86,16 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    out = []
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            out.append(list1.pop(0))
+        else:
+            out.append(list2.pop(0))
+    return out + list1 + list2
+
+
+
+
+
+
