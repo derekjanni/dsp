@@ -86,15 +86,15 @@ What does `xargs` do? Give an example of how to use it.
 >`xargs` is "execute arguments" - you can use it to pipe output of one unix command as input for another. Here's a really basic example: say you want to go through the python files in thinkstats2/code and find which of them use scipy directly. Instead of running two commands, you could just use find | xargs grep to filter the files:
 
 
-```>find *py | xargs grep "import scipy"```
+```find *py | xargs grep "import scipy"```
 
 this returns:
 
-```>mystery.py:import scipy.stats```
+```mystery.py:import scipy.stats```
 
-```>normal.py:import scipy.stats```
+```normal.py:import scipy.stats```
 
-```>thinkstats2.py:import scipy```
+```thinkstats2.py:import scipy```
 
 >Pretty neat command, will definitely use.
 
