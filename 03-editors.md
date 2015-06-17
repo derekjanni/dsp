@@ -31,7 +31,7 @@ Both Emacs and vim have built-in interactive tutorials that you can try.
 
 What terminal editor will you use? How did you make your decision?
 
-Emacs! I've used it before, so it's less of a learning curve than one of the others for me.
+>Emacs! I've used it before, so it's less of a learning curve than one of the others for me.
 
 ---
 
@@ -61,6 +61,6 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
-I'll use PyCharm. I've already got it installed, and I like that IDE's make things a little more easily visualized/organized. I know a bit about Sublime and Emacs too, so that's nice in case PyCharm and I have a falling-out (sometimes I want to punch it for the hassle of getting packages to work in my projects).
+>I'll use PyCharm. I've already got it installed, and I like that IDE's make things a little more easily visualized/organized. I know a bit about Sublime and Emacs too, so that's nice in case PyCharm and I have a falling-out (sometimes I want to punch it for the hassle of getting packages to work in my projects).
 
 ---
