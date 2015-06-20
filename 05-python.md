@@ -43,8 +43,8 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 >```f = lambda x, y : y*2 + x**2 + 5``` - this makes a multivariate function, f, that varies according to whatever's in x and y.
 
 >```dogs = [('sparky', 'black lab', 2), ('beelzebub', 'corgie', 5), ('bracelet', 'german shepard', 6)]
-> If you wanted ot sort the dog tuples by their breed, you could use
->```sorted(dogs, key=lambda dog: dog[1])``` 
+> If you wanted to sort the dog tuples by their breed, you could use
+`sorted(dogs, key=lambda dog: dog[1])`
 
 ---
 
@@ -53,12 +53,19 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->In math class, we want to use set builder notation to denote things like "x | n in N & x = 2n". This set of includes all of th natural even numbers. Conveniently, Python's list comphension tricks are a lot like this! For example:
+>In math class, we want to use set builder notation to denote things like "{x | n in N & x = 2n"}". This set of includes all of the natural even numbers. Conveniently, Python's list comphension tricks are a lot like this! For example:
 
 >`x = [2*x for x in range(10)]`
 >`x = map(lambda w: 2*w, range(10))`
 
->The first is a straightforward list comphension, the second does the same taske by using `map`. The fun part about list comprehensions is that you can use them to do way more than just build sets (more to come soon).
+>The first is a straightforward list comphension, the second does the same task by using `map`. We could also use `filter` to do something similar:
+
+>`x = filter(lambda x: x%2 == 0, range(20))`
+
+>When you execute any of these, the output is `[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]`.
+
+>Here's another example (that I frequently use) for list comprehensions and dictionaries: (coming soon)
+
 
 ---
 
