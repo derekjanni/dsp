@@ -64,8 +64,19 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >When you execute any of these, the output is `[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]`.
 
->Here's another example (that I frequently use) for list comprehensions and dictionaries: (coming soon)
+>Here's another example (that I frequently use) for list comprehensions and dictionaries: 
 
+>dict = {x: [] for x in words}
+
+>This lets you build a dictionary that turns an array of words into an associative array, where each word is mapped to array of other values. Another example, where you use the average function in numpy to compute the means of samples and save them in a dictionary:
+
+>`dict = {x: average(x) for x in samples}`
+
+>List comprehensions are also a quick way to build sets. For instance, if you have a list of names with duplicates, weird capitalization or initials, you could use:
+
+>`{ name[0].upper() + name[1:].lower() for name in names if len(name) > 1 }`
+
+>To build a quick set of names that obeys your requirements. Overall, very similar to the idea of list comprehensions for lists.
 
 ---
 
