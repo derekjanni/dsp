@@ -8,7 +8,7 @@ import sys
 fname = sys.argv[1]
 wordcount = int(sys.argv[2])
 
-# import file from cmd line args
+# import file from cmd line args, the file must live in the same folder as this script
 f = open(fname,"r")
 corpus = f.read().lower()
 f.close()
@@ -35,4 +35,4 @@ while j < wordcount:
     j += 1
 chain_as_string = " ".join(chain)
 chain_as_string += '.' #period for style
-print(chain_as_string)
+print(chain_as_string) 
