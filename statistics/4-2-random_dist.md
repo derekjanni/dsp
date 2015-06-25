@@ -24,5 +24,5 @@ thinkplot.Show(xlabel='random number', ylabel ='CDF')
 ```
 ![CDF of Random Numbers](http://i.imgur.com/iMFyrfr.png)
 
-This is what we'd expect of a uniform random distribution: a flat, homogeneous PMF - indicating that there is an equal chance of pulling any X from this distribution and an upward-sloping CDF - indicating that each incremental step in X relates to a corresponding increase in the CDF.
+This is what we'd expect of a uniform random distribution: a flat, homogeneous PMF (indicating that there is an equal chance of pulling any X from this distribution) and an upward-sloping CDF (indicating that each incremental step in X relates to a corresponding increase in the CDF).
 
