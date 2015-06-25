@@ -14,10 +14,29 @@ Now, lets see what the PMF looks like
 
 ```python
 thinkplot.Pmfs([pmf])
-thinkplot.show()
+thinkplot.Show(xlabel='Number of Children < Age 18 in the Household', ylabel='PMF')
 ```
 
-![PMF of the Actual Distribution of children under the age of 18 in the household](http://i.imgur.com/oSg7MJX.png)
+![PMF of the Actual Distribution of children under the age of 18 in the household](http://i.imgur.com/iJQfz22.png)
 
+Well, that image is a bit large, but it gets the point across. 
 
+Now we compute the biased distribution (the same way that's outlined in the book):
 
+```python
+def BiasPmf(pmf, label):
+     new_pmf = pmf.Copy(label=label)
+     for x, p in pmf.Items():
+         new_pmf.Mult(x, x)
+     new_pmf.Normalize()
+     return new_pmf
+bias = BiasPmf(pmf, label='observed')
+```
+And plot both histograms at once:
+
+```python
+thinkplot.PrePlot(2)
+thinkplot.Pmfs([pmf, bias])
+thinkplot.Show(xlabel='Number of Children < Age 18 in the Household', ylabel='PMF')
+```
+![PMF of Actual vs. Biased Distribution of children under the age of 18 in the household](http://i.imgur.com/V6nhyNA.png)
