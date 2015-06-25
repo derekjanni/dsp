@@ -12,10 +12,10 @@ We now have a good model for the heights of men, in inches, in the United States
 ```python
 dist.cdf(70.787) 
 ```
-Returns a value of `0.5` - exactly half of any normal distribution has a height less than the mean. Thus, the percentage of men in between the two bounds is:
+Returns a value of `0.5`, confirming the fact that exactly half of any normal distribution has a value less than the mean. Thus, the percentage of men in between the two bounds is:
 
 ```python
 dist.cdf(73) - dist.cdf(70)
 ```
 
-In other words, about 33.27% of US men fall between these heights - making that number the percentage of American men eligible to join Blue Man Group.
+In other words, about `33.27%` of US men fall between these heights; thus, we have the percentage of American men eligible to join Blue Man Group.
