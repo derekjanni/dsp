@@ -41,11 +41,13 @@ def Exp(n, m):
     thinkplot.show(xlabel='Iteration', ylabel='Sample Value of L')
 ```
 
-Then, from the command line, it's as simple as running
+Then, from the command line, it's as simple as running:
+
+To simulate a 10-size sample 1000 times:
 ```python
-estimate.Exp(10, 1000) #simulate a 10-size sampling 1000 times
-estimate.Exp(50, 1000) #simulate a 50-size sampling 1000 times
-estimate.Exp(250, 1000) #simulate a 250-sieze sampling 1000 times
+estimate.Exp(10, 1000) #simulate a 10-size sample 1000 times
+estimate.Exp(50, 1000) #simulate a 50-size sample 1000 times
+estimate.Exp(250, 1000) #simulate a 250-sieze sample 1000 times
 ```
 
-more to come soon
+
