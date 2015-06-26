@@ -68,5 +68,18 @@ estimate.Exp(250, 1000)
 ![Sampling Distribution for X~Exp(2) with 1000 samples of size n=250](http://i.imgur.com/ye2kIPk.png)
 
 
+If we plot `n` vs. `Standard Error` we get:
+![Effect of Increasing Sample Size on Standard Error](http://i.imgur.com/0Fmdd1j.png)
 
+So, in summary, since we're using a unbiased estimator we see that the standard error decreases with increasing sample sizes. To save space with all of these graphs, here's a more complete view that shows the convergence more clearly:
 
+![Effect of Increasing Sample Size on Standard Error](http://i.imgur.com/Pewy5lP.png)
+
+Of course, such a plot is a little unnecessary, as we could (and should) just *prove* that as `n` increases, `standard error` decreases. Such a proof is easy:
+
+Given that SE is defined as:
+![Definition of Standard Error](https://upload.wikimedia.org/math/b/b/2/bb234d9a63401082dbd197c430fd35c9.png)
+and
+![Definition of "s"](https://upload.wikimedia.org/math/b/2/6/b26a881372bbca2d567df98c6ef84418.png)
+
+It's easy to see that as `n` increases, both `s` and `standard error` must decrease toward zero, so long as the the population mean is finite!
