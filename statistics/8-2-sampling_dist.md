@@ -78,6 +78,7 @@ So, in summary, since we're using a unbiased estimator we see that the standard 
 Of course, such a plot is a little unnecessary, as we could (and should) just *prove* that as `n` increases, `standard error` decreases. Such a proof is easy:
 
 Given that SE is defined as:
+
 ![Definition of Standard Error](https://upload.wikimedia.org/math/b/b/2/bb234d9a63401082dbd197c430fd35c9.png)
 
 and
