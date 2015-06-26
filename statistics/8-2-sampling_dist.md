@@ -47,22 +47,25 @@ Simulate a 10-size sample 1000 times:
 ```python
 estimate.Exp(10, 1000)
 ```
-Standard Error: 0.856410495377
-Confidence Interval: (1.2291766987664456, 3.8586455636150165)
-![alt](link.com)
+`Standard Error: 0.856410495377`
+`Confidence Interval: (1.2291766987664456, 3.8586455636150165)`
+![Sampling Distribution for X~Exp(2) with 1000 samples of size n=10 ](http://i.imgur.com/EWqzJUX.png)
 
 Simulate a 50-size sample 1000 times
 ```python
 estimate.Exp(50, 1000) 
 ```
+`Standard Error: 0.305947978247`
+`Confidence Interval: (1.5939562446187574, 2.5843674082263912)`
+![Sampling Distribution for X~Exp(2) with 1000 samples of size n=50](http://i.imgur.com/ei4fRyj.png)
 
-![alt](link.com)
 Simulate a 250-size sample 1000 times
 ```python
 estimate.Exp(250, 1000)
 ```
-
-![alt](link.com)
+`Standard Error: 0.12486248451`
+`Confidence Interval: (1.8029704159502067, 2.2106111033128997)`
+![Sampling Distribution for X~Exp(2) with 1000 samples of size n=250](http://i.imgur.com/ye2kIPk.png)
 
 
 
