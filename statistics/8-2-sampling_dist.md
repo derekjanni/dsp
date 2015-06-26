@@ -79,7 +79,9 @@ Of course, such a plot is a little unnecessary, as we could (and should) just *p
 
 Given that SE is defined as:
 ![Definition of Standard Error](https://upload.wikimedia.org/math/b/b/2/bb234d9a63401082dbd197c430fd35c9.png)
+
 and
+
 ![Definition of "s"](https://upload.wikimedia.org/math/b/2/6/b26a881372bbca2d567df98c6ef84418.png)
 
 It's easy to see that as `n` increases, both `s` and `standard error` must decrease toward zero, so long as the the population mean is finite!
