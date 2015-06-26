@@ -14,7 +14,7 @@ To get a scatter plot:
 thinkplot.Scatter(weights, ages)
 thinkplot.show(xlabel='Baby\'s Weight (lbs.)', ylabel='Mother\'s Age')
 ```
-![Scatter Plot of Baby's Weight vs. Mother's Age]()
+![Scatter Plot of Baby's Weight vs. Mother's Age](http://i.imgur.com/9N6wpeO.png)
 
 Then, calculate the Pearson & Spearman correlation coefficients, respectively:
 
