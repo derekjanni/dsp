@@ -40,3 +40,5 @@ thinkplot.Pmfs([pmf, bias])
 thinkplot.Show(xlabel='Number of Children < Age 18 in the Household', ylabel='PMF')
 ```
 ![PMF of Actual vs. Biased Distribution of children under the age of 18 in the household](http://i.imgur.com/V6nhyNA.png)
+
+There's the classic "you don't know what you don't know" paradox played out in actual numbers. The moral of the story: when you're collecting data you have to make sure your sample is actually representative of the population in question. In the case of the biased distribution, asking the children immediately creates a problem - if there are no children in the household, then these households vanish from the dataset entirely!
