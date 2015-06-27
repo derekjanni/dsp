@@ -18,4 +18,4 @@ Returns a value of `0.5`, confirming the fact that exactly half of any normal di
 dist.cdf(73) - dist.cdf(70)
 ```
 
-In other words, about `33.27%` of US men fall between these heights; thus, we have the percentage of American men eligible to join Blue Man Group.
+Running that line of code tells us that about `33.27%` of US men fall between these heights; thus, we have the percentage of American men eligible to join Blue Man Group.
