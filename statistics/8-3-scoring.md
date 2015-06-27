@@ -81,7 +81,7 @@ def SimMany(lam, n, rep):
     thinkplot.show(xlabel='Iteration', ylabel='Sample Value of Goals per Game')
 ```
 
-By calling `soccer.Simulate(lam)` from the command line, you can simulate a single game. 
+By calling `soccer.Simulate(lam)` from the command line, you can simulate a single game by using Inverse Transform Sampling.
 
 By calling `soccer.SimMany(lam, n, rep)` from the command line you can simulate (and plot) many games and deduce facts about the sampling distribution from there. Consider what happens for increasing values of `n`:
 
