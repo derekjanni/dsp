@@ -85,4 +85,4 @@ and
 
 ![Definition of "s"](https://upload.wikimedia.org/math/b/2/6/b26a881372bbca2d567df98c6ef84418.png)
 
-It's easy to see that as `n` increases, both `s` and `standard error` must decrease toward zero, so long as the the population mean is finite!
+It's easy to see that as `n` increases, both `s` and `standard error` must decrease toward zero, so long as the squared deviations from the mean remain more or less constant!
