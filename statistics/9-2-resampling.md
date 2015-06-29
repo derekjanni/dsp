@@ -1,6 +1,6 @@
 [Think Stats Chapter 9 Exercise 2](http://greenteapress.com/thinkstats2/html/thinkstats2010.html#toc90) (resampling)
 
-For this exercise, I simply modified my existing `hypothesis` file and added some new tests to `RunTests()`. The added tests examine whether the birth weight and pregnancy lenghts vary significantly from first children to other children. They also seek to determine whether the resample or permutation models return different results for the same data.
+For this exercise, I modified my existing `hypothesis` file and added some new wording to `RunTests()`. The added tests examine whether the birth weight and pregnancy lenghts vary significantly from first children to other children. They also seek to determine whether the resample or permutation models return different approximations for the null hypothesis.
 
 Next, here's the class `DiffMeansResample` that I wrote and added to `hypothesis`
 
@@ -18,34 +18,41 @@ class DiffMeansResample(thinkstats2.HypothesisTest):
         self.pool = np.hstack((group1, group2))
 
     def RunModel(self):
-    	group1, group2 = self.data
-	data = Resample(group1), Resample(group2)
-	return data
+        group1, group2 = self.data
+        self.n, self.m = len(group1), len(group2)
+        data = thinkstats2.Resample(self.pool, n), thinkstats2.Resample(self.pool, m)
+        return data
 ```
-In `ReplicateTests()`, I added to the existing tests:
+In `RunTests()`, I added the following to the existing test:
+
 ```python
-ht = hypothesis.DiffMeansResample(Data)
-p = PValue()
+# resample                                                                    
+ht = DiffMeansResample(data)
+p_value = ht.PValue(iters=1000)
+print('means resample two-sided')
+PrintTest(p_value, ht)
 ```
-Which returned:
+So that whenever `RunTests` was called, both forms of the null hypothesis would be tested. This returned:
 ```
 prglngth
 means permute two-sided
-p-value = 0.0
-actual = 0.164708338667
-ts max = 0.141380631515
+p-value = 0.178
+actual = 0.0780372667775
+ts max = 0.200182479001
 means resample two-sided
-p-value = 0.509
-actual = 0.164708338667
-ts max = 0.338554835567
+p-value = 0.165
+actual = 0.0780372667775
+ts max = 0.184309916631
 
 birth weight
 means permute two-sided
 p-value = 0.0
-actual = 0.170870412946
-ts max = 0.0734615805093
+actual = 0.124761184535
+ts max = 0.121272219846
 means resample two-sided
-p-value = 0.536
-actual = 0.170870412946
-ts max = 0.251699817305
+p-value = 0.0
+actual = 0.124761184535
+ts max = 0.0943677846402
 ```
+
+As you can see, the method doesn't *really* make a difference. That's not entirely surprising, as either simulation of the null hypothesis leads us to a situation where the elements are randomized into two distinct bins, which (in theory) should be equivalent in terms of mean, std, etc. The small fluctuations are likely a result of the random elements at play here, not any real difference in the methodology.
